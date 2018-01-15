@@ -11,11 +11,13 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
+                bat 'npm test'
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+                echo 'PRETEND DEPLOY SUCCESS'
             }
         }
     }
